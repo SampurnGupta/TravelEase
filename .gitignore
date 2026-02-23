@@ -61,7 +61,190 @@ debug.keystore
 /.idea/tasks.xml
 /.idea/gradle.xml
 /.idea/dictionaries/
+/.idea/libraries/# File: `README.md`
+# TravelEase
+
+Small Android app to manage travel planning and packing checklists.
+
+## Key points
+- Language: Java/Kotlin
+- Build: Gradle (wrapper included)
+- IDE: Android Studio (Android Studio Meerkat Feature Drop | 2024.3.2 recommended)
+- Branch: `main`
+
+## Features
+- Packing checklist with persistent storage (SharedPreferences)
+- Modular Android app structure
+
+## Requirements
+- Android Studio (2024.3.2 or newer)
+- JDK 17
+- Android SDK (matching project's compileSdk)
+- Project uses Gradle wrapper: use `.\gradlew.bat` on Windows or `./gradlew` on macOS/Linux
+
+## Build & run (Windows)
+1. Open project in Android Studio and let it sync.
+2. Or from command line (project root):
+   - `.\gradlew.bat assembleDebug`
+   - Install/run on device/emulator via Android Studio or `.\gradlew.bat installDebug`
+
+## Tests
+- Unit tests: `.\gradlew.bat test`
+- Instrumentation tests (device/emulator): `.\gradlew.bat connectedAndroidTest`
+
+## Contributing
+See `CONTRIBUTING.md`.
+
+## License
+This project is licensed under the MIT License - see `LICENSE`.
+
+---
+
+# File: `.gitignore`
+# Gradle / Android
+.gradle/
+**/build/
+build/
+
+# Local config (keep local.properties out of VCS)
+local.properties
+/local.properties
+
+# Android Studio / IntelliJ
+*.iml
+*.ipr
+*.iws
+/.idea/
+/.idea/*
+
+# Generated files
+*.apk
+*.ap_
+*.aab
+*.dex
+*.class
+
+# Native build / CMake
+.externalNativeBuild/
+.cxx/
+
+# Captures
+/captures
+
+# Keystores and signing
+*.jks
+*.keystore
+*.p12
+debug.keystore
+
+# Google services (uncomment if needed)
+# google-services.json
+
+# Gradle wrapper caches (do not ignore wrapper files in gradle/wrapper/)
+.gradle-wrapper.jar
+
+# Logs and misc
+*.log
+.DS_Store
+.vscode/
+.idea_modules/
+
+# IDE caches and local history
+/.idea/caches/
+/.idea/workspace.xml
+/.idea/tasks.xml
+/.idea/gradle.xml
+/.idea/dictionaries/
 /.idea/libraries/
+
+# Misc
+*.orig
+*.rej
+
+# OS files
+Thumbs.db
+ehthumbs.db
+
+---
+
+# File: `LICENSE`
+MIT License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+[Full MIT text can be added here; replace with your name and year when committing.]
+
+---
+
+# File: `.gitattributes`
+# Ensure consistent line endings
+* text=auto
+
+# Treat common binary files as binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.jar binary
+*.aar binary
+
+---
+
+# File: `.github/workflows/android-ci.yml`
+name: Android CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Cache Gradle packages
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper/
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x ./gradlew
+
+      - name: Build (assembleDebug)
+        run: ./gradlew assembleDebug --no-daemon
+
+      - name: Run unit tests
+        run: ./gradlew test --no-daemon
+
+---
+
+# File: `CONTRIBUTING.md`
+Thanks for contributing!
+
+- Fork the repo and create a feature branch: `git checkout -b feat/your-feature`
+- Keep changes focused and add tests where appropriate.
+- Follow existing code style (Android Studio auto-format).
+- Open a pull request against `main` with a short description of changes.
 
 # Misc
 *.orig

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="menu_option_1" type="id" />
+    <item name="menu_option_2" type="id" />
+    <item name="menu_option_3" type="id" />
+    <item name="menu_option_4" type="id" />
+    <item name="menu_option_5" type="id" />
+    <item name="menu_option_6" type="id" />
+    <item name="menu_option_8" type="id" />
+    <item name="menu_option_7" type="id" />
+    <item name="coverPhoto" type="id" />
+</resources>

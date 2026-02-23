@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <EditText
+            android:id="@+id/et_amount"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Enter Amount"
+            android:inputType="numberDecimal"
+            android:background="@android:color/darker_gray"
+            android:padding="10dp"/>
+
+        <EditText
+            android:id="@+id/et_date"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Enter Date"
+            android:focusable="false"
+            android:clickable="true"
+            android:background="@android:color/darker_gray"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <Spinner
+            android:id="@+id/sp_category"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:entries="@array/expense_categories"
+            android:background="@android:color/darker_gray"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/btn_add_expense"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Add Expense"
+            android:textSize="18sp"
+            android:background="@android:color/holo_blue_dark"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Expense Overview"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="20dp"/>
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/pie_chart"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="10dp"/>
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/bar_chart"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="20dp"/>
+    </LinearLayout>
+</ScrollView>

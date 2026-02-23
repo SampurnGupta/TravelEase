@@ -1,0 +1,68 @@
+*.iml
+.gradle
+/local.properties
+/.idea
+/build
+/captures
+.externalNativeBuild
+.cxx
+.DS_Store# Android / Gradle
+.gradle/
+**/build/
+build/
+
+# Local config (keep local.properties out of VCS)
+local.properties
+/local.properties
+
+# Android Studio / IntelliJ
+*.iml
+*.ipr
+*.iws
+/.idea/
+/.idea/*
+
+# Generated files
+*.apk
+*.ap_
+*.aab
+*.dex
+*.class
+
+# Native build / CMake
+.externalNativeBuild/
+.cxx/
+
+# Captures
+/captures
+
+# Keystores and signing
+*.jks
+*.keystore
+*.p12
+debug.keystore
+
+# Google services (optional - uncomment if you want to ignore)
+/# google-services.json
+
+# Gradle wrapper (keep the wrapper files committed; ignore wrapper caches)
+.gradle-wrapper.jar
+# (Do not ignore gradle/wrapper/gradle-wrapper.jar in general)
+
+# Logs and misc
+*.log
+.DS_Store
+.vscode/
+.idea_modules/
+
+# IDE caches and local history
+/.idea/caches/
+/.idea/workspace.xml
+/.idea/tasks.xml
+/.idea/gradle.xml
+/.idea/dictionaries/
+/.idea/libraries/
+
+# Misc
+*.orig
+*.rej

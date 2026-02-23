@@ -1,0 +1,22 @@
+<resources>
+    <array name="icons">
+        <item>@drawable/img_1</item>
+        <item>@drawable/img_2</item>
+        <item>@drawable/img_3</item>
+        <item>@drawable/img_4</item>
+        <item>@drawable/img_5</item>
+        <item>@drawable/img_6</item>
+        <item>@drawable/img_7</item>
+        <item>@drawable/img_8</item>
+    </array>
+    <array name="colors">
+        <item>@android:color/holo_blue_light</item>
+        <item>@android:color/holo_green_dark</item>
+        <item>@android:color/holo_red_light</item>
+        <item>@android:color/holo_purple</item>
+        <item>@android:color/holo_orange_light</item>
+        <item>@android:color/holo_blue_dark</item>
+        <item>@android:color/holo_green_light</item>
+        <item>@android:color/holo_red_dark</item>
+    </array>
+</resources>

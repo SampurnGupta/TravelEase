@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">TravelEase</string>
+    <string name="title_home">Home</string>
+    <string name="title_explore">Explore</string>
+    <string name="title_bookings">Bookings</string>
+    <string name="title_profile">Profile</string>
+    <string name="login_welcome">Welcome to TravelEase</string>
+    <string name="login_subtitle">Your journey begins here</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="login_button">Login</string>
+    <string name="signup_prompt">Don\'t have an account? Sign up</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="popular_destinations">Popular Destinations</string>
+    <string name="special_offers">Special Offers</string>
+    <string name="search_hint">Where would you like to go?</string>
+    <string name="welcome_message">Welcome, Traveler!</string>
+    <string name="home_subtitle">Discover your next adventure</string>
+    <string name="see_all">See All</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="expense_categories">
+        <item>Food</item>
+        <item>Transport</item>
+        <item>Accommodation</item>
+        <item>Shopping</item>
+        <item>Entertainment</item>
+        <item>Other</item>
+    </string-array>
+</resources>
